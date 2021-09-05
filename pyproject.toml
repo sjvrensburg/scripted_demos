@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "scripted_demos"
-version = "0.1.0"
+version = "0.1.1"
 description = "Types your code for you! Useful to script live code demonstrations."
 authors = ["sjvrensburg <sjansevanrensburg@gmail.com>"]
 license = "MIT"

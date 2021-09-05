@@ -18,7 +18,7 @@ def main(input: str, keyboard, wpm: int=34, delay: int=5):
         for line, nextline in pairwise(lines):
             if i > 0 and i % 10 == 0:
                 click.clear()
-            click.echo(nextline)
+            click.echo(nextline, nl=False)
             if i > 0:
                 parse(
                     line, 
@@ -43,6 +43,7 @@ def demo(input: str, cmd: str='R', delay: int=5, speed: int=34):
     try:
         echo(f'Type  \"{cmd}\" and press \"Enter\" into the window\nwhere you want to run the demo.')
         if trigger(cmd):
+            click.clear()
             main(input, keyboard, speed, delay)
     except KeyboardInterrupt:
         sys.exit('Process interrupted.')

@@ -63,7 +63,8 @@ def pause(t: float=1):
 
 # Pause until...
 def wait(continue_key=Key.enter):
-    click.echo(f'Paused. Press "{continue_key}" to continue.')
+    click.echo(
+        click.style(f'Paused. Press "{continue_key}" to continue.', blink=True, bold=True))
     with Listener(on_press=lambda key: key != continue_key) as listener:
         listener.join()
 

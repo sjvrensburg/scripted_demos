@@ -31,7 +31,6 @@ def parse(
     display_kwargs.pop('wpm', None)
 
     if wait_ptrn.search(line):
-        echo(f'Press {key} to continue...')
         return wait(key)
     
     if display_ptrn.search(line):

@@ -67,6 +67,9 @@ def wait(continue_key=Key.enter):
         click.style(f'Paused. Press "{continue_key}" to continue.', blink=True, bold=True))
     with Listener(on_press=lambda key: key != continue_key) as listener:
         listener.join()
+    click.echo(
+        click.style('Unpaused.', bold=True))
+    click.clear()
 
 
 # Clear: Clear the screen

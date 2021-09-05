@@ -24,7 +24,7 @@ def parse(
     kwargs: Dict[str, Any]={
         'wpm': 40, 'enter': False, 'init': 1,
         'prefix': '#'},
-    t = 1, key = Key.esc) -> None:
+    t = 1, key = Key.ctrl) -> None:
     line_kwargs = copy(kwargs)
     line_kwargs.pop('prefix', None)
     display_kwargs = copy(kwargs)

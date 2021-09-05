@@ -1,4 +1,3 @@
-from click.utils import echo
 from scripted_demos.parse_line import parse
 from scripted_demos.utilities import trigger
 from pynput.keyboard import Controller
@@ -41,10 +40,12 @@ def main(input: str, keyboard, wpm: int=34, delay: int=5):
 def demo(input: str, cmd: str='R', delay: int=5, speed: int=34):
     keyboard = Controller()
     try:
-        echo(f'Type  \"{cmd}\" and press \"Enter\" into the window\nwhere you want to run the demo.')
+        click.echo(
+            f'Type  \"{cmd}\" and press \"Enter\" into the window\nwhere you want to run the demo.')
         if trigger(cmd):
             click.clear()
             main(input, keyboard, speed, delay)
     except KeyboardInterrupt:
         sys.exit('Process interrupted.')
+    click.echo(click.style('DONE!', bold=True))
     sys.exit()

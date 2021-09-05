@@ -44,3 +44,9 @@ The commands are as follows:
 - `#<< some text` will output `# some text` to the active window without any delays,
 - `#cls` will simulate the keyboard command `ctrl+l`, which clears the screen in most programs and
 - `#{5}` will pause for 5 seconds (replace 5 with how many seconds you want to pause).
+
+## Tips And Tricks
+
+If you are going to use this to type commands into RStudio, disable the global option to insert matching parentheses and quotes.
+
+Also, keep the console from which you launched the app visible. It will show you what the next line in your file and alert you when the app is waiting for user input.

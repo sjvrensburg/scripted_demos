@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "scripted_demos"
+version = "0.1.0"
+description = "Types your code for you! Useful to script live code demonstrations."
+authors = ["sjvrensburg <sjansevanrensburg@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+click = "^8.0.1"
+bpython = "^0.21"
+pynput = "^1.7.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+demo = 'scripted_demos.cli:demo'
